@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form novalidate>
+      <fieldset>
+        <legend>Please fill in all boxes</legend>
+        <ul class="form-list-items">
+          <li class="list-item-email">
+            <label for="email">Email:</label>
+            <input name="email" type="email" id="email" />
+            <span class="email-error"></span>
+          </li>
+          <li class="list-item-country">
+            <label for="country">Country:</label>
+            <input name="country" type="text" id="country" />
+            <span class="country-error"></span>
+          </li>
+          <li class="list-item-postcode">
+            <label for="postcode">Postcode:</label>
+            <input name="postcode" type="text" id="postcode" />
+            <span class="postcode-error"></span>
+          </li>
+          <li class="list-item-password-one">
+            <label for="password-one">Password:</label>
+            <input name="password-one" type="password" id="password-one" />
+            <span class="password-one-error"></span>
+          </li>
+          <li class="list-item-password-two">
+            <label for="password-two">Confirm Password:</label>
+            <input name="password-two" type="password" id="password-two" />
+            <span class="password-two-error"></span>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </body>
+</html>
