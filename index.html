@@ -20,22 +20,28 @@
           <li class="list-item-country">
             <label for="country">Country:</label>
             <input name="country" type="text" id="country" />
-            <span class="country-error"></span>
+            <div class="country-error"></div>
           </li>
           <li class="list-item-postcode">
             <label for="postcode">Postcode:</label>
-            <input name="postcode" type="text" id="postcode" />
-            <span class="postcode-error"></span>
+            <input
+              name="postcode"
+              type="text"
+              id="postcode"
+              pattern="^[A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}$"
+            />
+            <div class="postcode-error"></div>
           </li>
           <li class="list-item-password-one">
             <label for="password-one">Password:</label>
-            <input name="password-one" type="password" id="password-one" />
-            <span class="password-one-error"></span>
+            <input name="password-one" type="password" id="password-one"
+            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/>"
+            <div class="password-one-error"></div>
           </li>
           <li class="list-item-password-two">
             <label for="password-two">Confirm Password:</label>
             <input name="password-two" type="password" id="password-two" />
-            <span class="password-two-error"></span>
+            <div class="password-two-error"></div>
           </li>
         </ul>
       </fieldset>
