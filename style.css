@@ -16,6 +16,7 @@ html {
   height: 100%;
   width: 100%;
   background-color: white;
+  min-height: 350px;
 }
 body {
   height: 95%;
@@ -54,6 +55,14 @@ input {
   min-width: 50px;
 }
 
+input:valid {
+  border-color: rgb(61, 227, 61);
+}
+
+input:invalid.user-focused {
+  border-color: red;
+}
+
 legend {
   padding-left: 5px;
   padding-right: 5px;
@@ -71,9 +80,6 @@ ul {
 }
 
 fieldset {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   background-color: white;
   border-radius: 10px;
   border: 0;
@@ -82,8 +88,43 @@ fieldset {
 div {
   position: absolute;
   top: 25px;
-  right: 5px;
-  /* left: 90px; */
+  right: 10px;
   color: red;
-  font-size: smaller;
+  font-size: 0.7em;
+}
+
+.submit {
+  position: absolute;
+  left: 40%;
+  width: 20%;
+  bottom: 40%;
+}
+
+li:has(.submit) {
+  padding-top: 30px;
+}
+
+.modal-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 248, 255, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+.modal-message {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  border: 1px solid rgb(247, 198, 125);
+  background-color: blanchedalmond;
+  left: 25%;
+  top: 25%;
+  border-radius: 5px;
 }

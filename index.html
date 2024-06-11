@@ -8,18 +8,25 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="modal-background"></div>
+    <div class="modal-message">
+      <ul>
+        <li><h2></h2></li>
+        <li><button></button></li>
+      </ul>
+    </div>
     <form novalidate>
       <fieldset>
         <legend>Please fill in all boxes</legend>
         <ul class="form-list-items">
           <li class="list-item-email">
             <label for="email">Email:</label>
-            <input name="email" type="email" id="email" />
-            <span class="email-error"></span>
+            <input name="email" type="email" id="email" required />
+            <div class="email-error"></div>
           </li>
           <li class="list-item-country">
             <label for="country">Country:</label>
-            <input name="country" type="text" id="country" />
+            <input name="country" type="text" id="country" required />
             <div class="country-error"></div>
           </li>
           <li class="list-item-postcode">
@@ -29,20 +36,33 @@
               type="text"
               id="postcode"
               pattern="^[A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}$"
+              required
             />
             <div class="postcode-error"></div>
           </li>
           <li class="list-item-password-one">
             <label for="password-one">Password:</label>
-            <input name="password-one" type="password" id="password-one"
-            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/>"
+            <input
+              name="password-one"
+              type="password"
+              id="password-one"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+              required
+            />
             <div class="password-one-error"></div>
           </li>
           <li class="list-item-password-two">
             <label for="password-two">Confirm Password:</label>
-            <input name="password-two" type="password" id="password-two" />
+            <input
+              name="password-two"
+              type="password"
+              id="password-two"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+              required
+            />
             <div class="password-two-error"></div>
           </li>
+          <li><button class="submit" type="button">Submit</button></li>
         </ul>
       </fieldset>
     </form>
