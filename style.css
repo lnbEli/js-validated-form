@@ -34,6 +34,8 @@ form {
 
 .form-list-items > li {
   padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
   display: flex;
   width: 300px;
   position: relative;
@@ -68,11 +70,8 @@ input:valid + span::after {
   position: absolute;
   content: "☺";
   top: 5px;
-  right: -10px;
-}
-
-input:valid + span {
-  border: 1px green solid;
+  right: -2px;
+  color: green;
 }
 
 input:invalid.user-focused {
