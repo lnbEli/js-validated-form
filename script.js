@@ -75,6 +75,7 @@ function submitForm() {
   if (form.checkValidity() && checkPasswordsAreEqual()) {
     modal.style.display = "block";
   } else {
+    setLegendBackgroundColors("rgb(244, 118, 95)", "white");
     checkInputsHaveBeenFocussedBeforeSubmit();
     setCheckPasswordsErrorMessages();
     return;
@@ -114,4 +115,10 @@ function checkPasswordsAreEqual() {
   } else {
     return false;
   }
+}
+
+function setLegendBackgroundColors(bgColor, color) {
+  const legend = document.querySelector("legend");
+  legend.style.backgroundColor = bgColor;
+  legend.style.color = color;
 }
