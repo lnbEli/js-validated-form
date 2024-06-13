@@ -14,13 +14,25 @@
         <ul class="form-list-items">
           <li class="list-item-email">
             <label for="email">Email:</label>
-            <input name="email" type="email" id="email" required />
+            <input
+              name="email"
+              type="email"
+              id="email"
+              autocomplete="email"
+              required
+            />
             <span></span>
             <div class="email-error"></div>
           </li>
           <li class="list-item-country">
             <label for="country">Country:</label>
-            <input name="country" type="text" id="country" required />
+            <input
+              name="country"
+              type="text"
+              id="country"
+              autocomplete="country-name"
+              required
+            />
             <span></span>
             <div class="country-error"></div>
           </li>
@@ -31,6 +43,7 @@
               type="text"
               id="postcode"
               pattern="^[A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}$"
+              autocomplete="postal-code"
               required
             />
             <span></span>
